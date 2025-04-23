@@ -1,4 +1,4 @@
-@NamedInterface("api")
-package com.sktelecom.nova.modular.monolith.product.catalog.api;
+@ApplicationModule(displayName = "product-management-api")
+package com.sktelecom.nova.partner.management.api;
 
-import org.springframework.modulith.NamedInterface;
+import org.springframework.modulith.ApplicationModule;

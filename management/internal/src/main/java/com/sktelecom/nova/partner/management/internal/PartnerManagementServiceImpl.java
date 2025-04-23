@@ -1,10 +1,11 @@
-package com.sktelecom.nova.product.management.internal;
+package com.sktelecom.nova.partner.management.internal;
 
-import com.sktelecom.nova.modular.monolith.partner.management.api.PartnerDto;
-import com.sktelecom.nova.modular.monolith.partner.management.api.PartnerManagementService;
-import com.sktelecom.nova.modular.monolith.partner.management.api.PartnerRegistrationRequest;
-import com.sktelecom.nova.modular.monolith.shared.kernel.EventPublisher;
+import com.sktelecom.nova.partner.management.api.PartnerDto;
+import com.sktelecom.nova.partner.management.api.PartnerManagementService;
+import com.sktelecom.nova.partner.management.api.PartnerRegistrationRequest;
+
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +16,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 class PartnerManagementServiceImpl implements PartnerManagementService {
     private final PartnerRepository partnerRepository;
-    private final EventPublisher eventPublisher;
+    private final ApplicationEventPublisher eventPublisher;
 
     @Override
     @Transactional
@@ -24,7 +25,7 @@ class PartnerManagementServiceImpl implements PartnerManagementService {
                 Partner.createPartner(partnerRegistrationRequest.name(), partnerRegistrationRequest.email())
         );
 
-        eventPublisher.publish(registeredPartner.createPartnerRegistereddEvent());
+        eventPublisher.publishEvent(registeredPartner.createPartnerRegistereddEvent());
 
         return PartnerMapper.toPartnerDto(registeredPartner);
     }

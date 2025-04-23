@@ -1,4 +1,4 @@
-package com.sktelecom.nova.product.management.internal;
+package com.sktelecom.nova.partner.management.internal;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

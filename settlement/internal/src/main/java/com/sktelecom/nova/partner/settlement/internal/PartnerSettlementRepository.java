@@ -1,4 +1,4 @@
-package com.sktelecom.nova.modular.monolith.partner.settlement.internal;
+package com.sktelecom.nova.partner.settlement.internal;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,6 @@
-@NamedInterface("api")
-package com.sktelecom.nova.modular.monolith.partner.settlement.api;
+@ApplicationModule(
+        displayName="partner-settlement-api"
+)
+package com.sktelecom.nova.partner.settlement.api;
 
-import org.springframework.modulith.NamedInterface;
+import org.springframework.modulith.ApplicationModule;

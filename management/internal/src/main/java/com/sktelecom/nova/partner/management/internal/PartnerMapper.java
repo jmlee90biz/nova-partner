@@ -1,6 +1,6 @@
-package com.sktelecom.nova.product.management.internal;
+package com.sktelecom.nova.partner.management.internal;
 
-import com.sktelecom.nova.modular.monolith.partner.management.api.PartnerDto;
+import com.sktelecom.nova.partner.management.api.PartnerDto;
 
 class PartnerMapper {
     static PartnerDto toPartnerDto(Partner partner) {

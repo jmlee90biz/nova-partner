@@ -1,8 +1,8 @@
-package com.sktelecom.nova.modular.monolith.partner.settlement.internal;
+package com.sktelecom.nova.partner.settlement.internal;
 
-import com.sktelecom.nova.modular.monolith.partner.management.api.PartnerDto;
-import com.sktelecom.nova.modular.monolith.partner.management.api.PartnerManagementService;
-import com.sktelecom.nova.modular.monolith.partner.management.api.PartnerRegistrationRequest;
+import com.sktelecom.nova.partner.management.api.PartnerDto;
+import com.sktelecom.nova.partner.management.api.PartnerManagementService;
+import com.sktelecom.nova.partner.management.api.PartnerRegistrationRequest;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

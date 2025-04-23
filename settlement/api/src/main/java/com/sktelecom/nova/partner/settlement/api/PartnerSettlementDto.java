@@ -1,6 +1,5 @@
-package com.sktelecom.nova.modular.monolith.partner.settlement.api;
+package com.sktelecom.nova.partner.settlement.api;
 
-import java.math.BigDecimal;
 import java.util.UUID;
 
 

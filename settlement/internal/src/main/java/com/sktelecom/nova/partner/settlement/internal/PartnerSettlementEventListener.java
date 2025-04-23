@@ -1,13 +1,10 @@
-package com.sktelecom.nova.modular.monolith.partner.settlement.internal;
+package com.sktelecom.nova.partner.settlement.internal;
 
-import com.sktelecom.nova.modular.monolith.billing.payment.event.PaymentCompletedEvent;
-import com.sktelecom.nova.modular.monolith.common.notification.event.NotificationRequestedEvent;
-import com.sktelecom.nova.modular.monolith.customer.subscription.api.SubscriptionCustomerProductPricingPlanDto;
-import com.sktelecom.nova.modular.monolith.customer.subscription.api.SubscriptionService;
-import com.sktelecom.nova.modular.monolith.customer.subscription.event.SubscriptionActivatedEvent;
-import com.sktelecom.nova.modular.monolith.partner.settlement.event.PartnerSettlementCompletedEvent;
-import com.sktelecom.nova.modular.monolith.shared.kernel.EventPublisher;
+import com.sktelecom.nova.billing.payment.event.PaymentCompletedEvent;
+import com.sktelecom.nova.partner.settlement.event.PartnerSettlementCompletedEvent;
+
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.modulith.events.ApplicationModuleListener;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
@@ -16,7 +13,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class PartnerSettlementEventListener {
     //private final SubscriptionService subscriptionService;
-    private final EventPublisher eventPublisher;
+    private final ApplicationEventPublisher eventPublisher;
 
     @Async("taskExecutor")
     @ApplicationModuleListener
@@ -41,13 +38,13 @@ public class PartnerSettlementEventListener {
 //        SubscriptionCustomerProductPricingPlanDto subscriptionCustomerProductPricingPlanDto =
 //                subscriptionService.findSubscriptionCustomerProductPricingPlanById(subscriptionActivatedEvent.id());
 //
-        eventPublisher.publish(
-                NotificationRequestedEvent.create(
-                        "",
-                        "Subscription Activated",
-                        ""
-                )
-        );
+//        eventPublisher.publishEvent(
+//                NotificationRequestedEvent.create(
+//                        "",
+//                        "Subscription Activated",
+//                        ""
+//                )
+//        );
     }
 
 }

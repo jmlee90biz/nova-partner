@@ -1,6 +1,5 @@
-package com.sktelecom.nova.modular.monolith.partner.settlement.api;
+package com.sktelecom.nova.partner.settlement.api;
 
-import java.util.List;
 import java.util.UUID;
 
 public interface PartnerSettlementService {

@@ -1,4 +1,4 @@
-package com.sktelecom.nova.modular.monolith.partner.settlement.event;
+package com.sktelecom.nova.partner.settlement.event;
 
 import java.util.UUID;
 

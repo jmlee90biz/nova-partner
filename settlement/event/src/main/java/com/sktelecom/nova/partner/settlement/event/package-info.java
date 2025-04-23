@@ -1,11 +1,6 @@
-package com.sktelecom.nova.partner.settlement.internal;
-
-import org.springframework.modulith.ApplicationModule;
-
 @ApplicationModule(
-        displayName = "partner-settlement-internal",
-        allowedDependencies = {
-                "partner.settlement.api"
-        }
+        displayName = "partner-settlement-event"
 )
+package com.sktelecom.nova.partner.settlement.event;
+
 import org.springframework.modulith.ApplicationModule;

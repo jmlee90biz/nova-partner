@@ -1,7 +1,7 @@
 @ApplicationModule(
-        displayName = "product-management-internal",
-        allowedDependencies = "product.management.internal"
+        displayName = "partner-management-internal",
+        allowedDependencies = "partner.management.api"
 )
-package com.sktelecom.nova.product.management.internal;
+package com.sktelecom.nova.partner.management.internal;
 
 import org.springframework.modulith.ApplicationModule;

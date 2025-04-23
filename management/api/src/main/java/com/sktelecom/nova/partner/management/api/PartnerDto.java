@@ -1,4 +1,4 @@
-package com.sktelecom.nova.modular.monolith.partner.management.api;
+package com.sktelecom.nova.partner.management.api;
 
 import java.util.UUID;
 
